@@ -1,3 +1,9 @@
-.idea/*
-.idea/workspace.xml
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+.idea/
 target/
