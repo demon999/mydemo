@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+            http://www.springframework.org/schema/beans/spring-beans-3.1.xsd  
+            http://www.springframework.org/schema/context  
+            http://www.springframework.org/schema/context/spring-context-3.1.xsd  
+            http://www.springframework.org/schema/tx  
+            http://www.springframework.org/schema/tx/spring-tx-3.1.xsd  
+            http://www.springframework.org/schema/util  
+            http://www.springframework.org/schema/util/spring-util-3.1.xsd  
+            http://www.springframework.org/schema/mvc
+            http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
+
+	<!-- 打开注解  -->
+	<context:annotation-config />
+	
+	<!-- 打开自动扫描  -->
+	<context:component-scan base-package="com" />
+	
+	<!-- 打开事务注解 
+	<tx:jta-transaction-manager />
+	 <tx:annotation-driven/> 
+	<import resource="dataAccessContext-phhs.xml" />-->
+	<!-- 
+	<context:property-placeholder properties-ref="memcacheProperties" />
+	<util:properties id="memcacheProperties" location="classpath:memcached.properties" />
+	 -->
+	<!-- AJAX中文乱码  FOR ResponseBody -->
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" >  
+		<property name="messageConverters">   
+		         <list>   
+		             <bean class = "org.springframework.http.converter.StringHttpMessageConverter">   
+		                <property name = "supportedMediaTypes">
+		                      <list>
+		                          <value>text/html;charset=UTF-8</value> 
+		                     </list>   
+		                </property>   
+		             </bean>   
+		         </list>   
+		</property>  
+	</bean> 
+	
+	<!-- 定义登录状态的拦截器 -->
+	
+	<!-- 定义非登录状态的拦截器 -->
+	<!-- 
+	<mvc:interceptors>  
+      <bean class="com.yum.phhs.common.SessionInterceptor" /> 
+      <bean class="com.yum.phhs.common.MaliceRequestInterceptor" /> 
+    </mvc:interceptors> 
+	 -->
+	<!-- 异常页面处理 -->
+	<!-- 定义默认的异常处理页面，当该异常类型的注册时使用 -->  
+	<!-- 定义异常处理页面用来获取异常信息的变量名，默认名为exception -->  
+	 <!-- 定义需要特殊处理的异常，用类名或完全路径名作为key，异常也页名作为值 -->  
+	 <!-- 
+	<bean class="com.yum.phhs.exception.PHHSHandlerExceptionResolver">  
+	    
+	    <property name="defaultErrorView" value="../error"></property>  
+	    
+	    <property name="exceptionAttribute" value="ex"></property>  
+	   
+	    <property name="exceptionMappings">  
+	        <props>  
+	            <prop key="IOException">/jsp/error/ioexp</prop> 
+	            <prop key="SessionException">../login</prop> 
+	        </props>  
+	    </property>  
+	</bean>  
+	 -->
+	<!-- 国际化 -->
+	 <bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:message-info" />
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+
+	<bean id="localeResolver"  class="org.springframework.web.servlet.i18n.SessionLocaleResolver">  
+      	<property name="defaultLocale" value="zh_CN"/>
+    </bean> 
+	<bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+		<property name="paramName" value="lang" />
+	</bean>
+	<bean id="handlerMapping" class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+		<property name="interceptors">
+			<ref bean="localeChangeInterceptor" />
+		</property>
+	</bean>
+	
+
+	<!-- 视图解析器  -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.InternalResourceView" />
+		<property name="prefix" value="/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+</beans>
