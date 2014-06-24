@@ -5,5 +5,8 @@
 *.war
 *.ear
 
-.idea/
+out/
 target/
+
+.idea/
+.idea_modules/
