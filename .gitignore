@@ -1,7 +1,3 @@
-*.zip
-*.rar
-*.via
-*.tmp
-*.err
 .idea/*
+.idea/workspace.xml
 target/
