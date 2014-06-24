@@ -11,9 +11,9 @@
 
     <modules>
         <module>dp</module>
-        <module>test</module>
         <module>web</module>
         <module>nosql</module>
+        <module>base</module>
     </modules>
 
     <properties>
