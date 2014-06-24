@@ -3,4 +3,5 @@
 *.via
 *.tmp
 *.err
-/.idea/*
+.idea/*
+target/

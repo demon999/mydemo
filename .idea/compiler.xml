@@ -23,7 +23,6 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="dp" />
-        <module name="springdemo" />
         <module name="test" />
         <module name="web" />
       </profile>

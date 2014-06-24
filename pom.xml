@@ -12,7 +12,6 @@
         <module>dp</module>
         <module>test</module>
         <module>web</module>
-        <module>springdemo</module>
     </modules>
 
     <properties>
