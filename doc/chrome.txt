@@ -1,0 +1,7 @@
+
+Chrome浏览器无法同步标签的终极解决方法：
+打开C:\Windows\System32\drivers\etc\hosts 添加以下内容：
+203.208.46.25 clients4.google.com #google 标签服务器
+203.208.46.25 docs.google.com #google docs服务器
+203.208.46.25 chrome.google.com #google chrome服务器
+203.208.46.25 clients2.google.com #google某些扩展库服务器

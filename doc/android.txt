@@ -1,0 +1,37 @@
+
+Interview Question:
+
+Activity生命周期
+Android aidl原理
+如何保证service在后台不被kill
+Java垃圾回收机制
+Java状态机
+Broadcast生命周期
+两种单例模式的实现方式
+Invalidate 与 postInvaliate区别
+线程wait(),yelid(),sleep()区别
+Android为每个应用程序分配的内存大小是多少？
+Integer与Int的区别
+Java中int char long各占多少字节数
+Map原理
+Java内存回收机制
+View的刷新机制
+对AsyncTask的理解
+listview图片缓存机制
+如何防止进程死锁
+ContentProvider实现原理，为什么能够共享数据
+A a 与 Aa = new A();的区别
+谈谈对SurfaceView的理解
+与操作
+android的动画有哪几种
+
+
+Android的五种数据存储方式
+    sharedPreferences；文件；SQLite；contentProvider；网络
+
+什么是ANR,如何避免
+    运行在主线程里的任何访求都尽可能少做事情
+    潜在的耗时操作，例如网络或数据库操作，或者高耗时的计算如改变位图尺寸，应该在子线程里（或者以数据库操作为例，通过异步请求的方式）来完成
+
+Handler机制的原理
+    android提供了handler和looper来满足线程间的通信。Handler先进先出原则。looper用来管理特定线程内对象之间的消息交换（message Exchange）.
