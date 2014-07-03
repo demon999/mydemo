@@ -34,4 +34,11 @@ Android的五种数据存储方式
     潜在的耗时操作，例如网络或数据库操作，或者高耗时的计算如改变位图尺寸，应该在子线程里（或者以数据库操作为例，通过异步请求的方式）来完成
 
 Handler机制的原理
-    android提供了handler和looper来满足线程间的通信。Handler先进先出原则。looper用来管理特定线程内对象之间的消息交换（message Exchange）.
+    android提供了handler和looper来满足线程间的通信。Handler先进先出原则。looper用来管理特定线程内对象之间的消息交换（message Exchange）
+
+Android 双缓冲技术
+    Android中的SurfaceView类就是双缓冲机制。因此，开发游戏时尽量使用SurfaceView而不要使用View，这样的话效率较高，而且SurfaceView的功能也更加完善。
+    为了更容易的了解双缓冲技术，下面介绍用View实现双缓冲的方法。
+
+    先概述一下，双缓冲的核心技术就是先通过setBitmap方法将要绘制的所有的图形绘制到一个Bitmap上也就是先在内存空间完成，
+    然后再来调用drawBitmap方法绘制出这个Bitmap，显示在屏幕上。
