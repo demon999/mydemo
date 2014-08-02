@@ -1,0 +1,76 @@
+
+
+Linux关闭防火墙命令
+http://os.51cto.com/art/200912/166385.htm
+
+iptables
+http://www.cnblogs.com/JemBai/archive/2009/03/19/1416364.html
+
+Linux etc
+http://blog.csdn.net/rig622/article/details/7591419
+
+
+HTTP协议 状态码详解
+http://www.cnblogs.com/TankXiao/archive/2013/01/08/2818542.html
+
+CSS Sprites
+
+jquery.fixbox.js 侧边跟随模块（fixed定位）
+
+Fiddler http://fiddler2.com/
+http://www.cnblogs.com/TankXiao/archive/2012/02/06/2337728.html
+HTTP调试工具
+http://www.cnblogs.com/FrameWork/archive/2006/10/16/529835.html
+http://www.cnblogs.com/FrameWork/archive/2006/10/16/530827.html
+
+http://www.commonjs.org/impl/
+http://seajs.org/
+
+模块化高扩展性的前端框架KISSY
+ 
+Web开发常见的几个漏洞解决方法
+http://developer.51cto.com/art/201304/389729.htm
+
+面向对象设计原则
+http://developer.51cto.com/art/201304/389902.htm
+
+如何做一个优秀的前端重构工程师
+http://developer.51cto.com/art/201301/376908.htm
+
+前端模块化开发那点历史
+http://developer.51cto.com/art/201303/384086.htm
+
+Web前端性能优化进阶路
+http://developer.51cto.com/art/201301/378016.htm
+
+Best Practices for Speeding Up Your Web Site
+http://developer.yahoo.com/performance/rules.html
+
+网易财经前端开发总结
+http://developer.51cto.com/art/201302/381308.htm
+
+前端模块化开发的价值
+http://developer.51cto.com/art/201303/384084.htm
+
+Backbone.js入门学习笔记目录
+http://www.the5fire.com/backbone-tutorials-catalogue.html
+http://weakfi.iteye.com/blog/1391990
+http://marshal.easymorse.com/archives/4901
+
+http://www.fileguru.com/
+http://www.fileguru.com/Light-Portal/download
+
+HTTP协议之HTTP消息
+http://free9277.iteye.com/blog/1857842
+
+jQuery中容易让人困惑的东西
+http://developer.51cto.com/art/201204/331860.htm
+
+html {  
+  -webkit-filter: grayscale(100%);<!--通过测试grayscale(1)跟grayscale(100%)特效是一样的-->  
+  -moz-filter: grayscale(100%);  
+  -ms-filter: grayscale(100%);  
+  -o-filter: grayscale(100%);  
+  filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);  
+  _filter:none;  
+} 
