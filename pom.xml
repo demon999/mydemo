@@ -14,6 +14,7 @@
         <module>web</module>
         <module>nosql</module>
         <module>base</module>
+        <module>rest</module>
     </modules>
 
     <properties>
