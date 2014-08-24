@@ -19,5 +19,10 @@ public class Client {
     public static void main(String[] args) {
         Targetable target = new Adapter();
         target.operation2();
+
+//        Adapter模式通过在Adapter类中调用外部组件来实现功能。
+//        根据调用方式的不同，Adapter模式有2种实现方法：
+//        通过继承实现Adapter
+//        通过委让实现Adapter
     }
 }
