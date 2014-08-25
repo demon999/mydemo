@@ -46,6 +46,7 @@
             <artifactId>spring-data-mongodb</artifactId>
             <version>${spring.data.mongodb.version}</version>
         </dependency>
+
         <!--<dependency>
             <groupId>com.googlecode.xmemcached</groupId>
             <artifactId>xmemcached</artifactId>
