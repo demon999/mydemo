@@ -16,6 +16,7 @@
         <module>base</module>
         <module>rest</module>
         <module>bigdata</module>
+        <module>mq</module>
     </modules>
 
     <properties>
