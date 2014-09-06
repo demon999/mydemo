@@ -12,10 +12,17 @@
     <artifactId>mq</artifactId>
 
     <properties>
+        <amqp-client.version>3.3.5</amqp-client.version>
         <spring-rabbit.version>1.3.6.RELEASE</spring-rabbit.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>${amqp-client.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.amqp</groupId>
             <artifactId>spring-rabbit</artifactId>
