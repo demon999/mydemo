@@ -1,6 +1,4 @@
-package com.snow.encryption;
-
-import sun.misc.BASE64Decoder;
+package com.snow.cryption;
 
 /**
  * Created by Richard on 14-8-13.
