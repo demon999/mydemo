@@ -62,7 +62,6 @@ public class Coder {
         MessageDigest md5 = MessageDigest.getInstance(KEY_MD5);
         md5.update(data);
         return md5.digest();
-
     }
 
     /**
@@ -73,12 +72,9 @@ public class Coder {
      * @throws Exception
      */
     public static byte[] encryptSHA(byte[] data) throws Exception {
-
         MessageDigest sha = MessageDigest.getInstance(KEY_SHA);
         sha.update(data);
-
         return sha.digest();
-
     }
 
     /**
@@ -106,6 +102,5 @@ public class Coder {
         Mac mac = Mac.getInstance(secretKey.getAlgorithm());
         mac.init(secretKey);
         return mac.doFinal(data);
-
     }
 }
