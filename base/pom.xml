@@ -30,6 +30,7 @@
         <jaxb.version>2.2.11</jaxb.version>
         <testng.version>6.8.8</testng.version>
         <qi4j.version>2.0</qi4j.version>
+        <pinyin4j.version>2.5.0</pinyin4j.version>
     </properties>
 
     <dependencies>
@@ -87,6 +88,12 @@
             <artifactId>org.qi4j.core.testsupport</artifactId>
             <version>${qi4j.version}</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.belerweb</groupId>
+            <artifactId>pinyin4j</artifactId>
+            <version>${pinyin4j.version}</version>
         </dependency>
 
         <!--<dependency>
