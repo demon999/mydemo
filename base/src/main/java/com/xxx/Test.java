@@ -1,9 +1,6 @@
 package com.xxx;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.nio.channels.FileChannel;
 
 /**
@@ -48,6 +45,35 @@ public class Test {
                 in.close();
                 fo.close();
                 out.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void copy(File s,File t) {
+        InputStream is = null;
+        OutputStream os = null;
+        try {
+            is = new BufferedInputStream(new FileInputStream(s));
+            os = new BufferedOutputStream(new FileOutputStream(t));
+            byte[] buf = new byte[4096];
+            int i;
+            while ((i=is.read(buf)) > -1) {
+                os.write(buf,0,i);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if(is != null) {
+                    is.close();
+                }
+                if(os != null) {
+                    os.close();
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }
