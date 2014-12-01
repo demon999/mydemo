@@ -99,6 +99,8 @@
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.16" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.7.3" level="project" />
     <orderEntry type="library" name="Maven: com.itextpdf:itextpdf:5.5.0" level="project" />
+    <orderEntry type="library" name="Maven: com.yahoo.platform.yui:yuicompressor:2.4.7" level="project" />
+    <orderEntry type="library" name="Maven: rhino:js:1.6R7" level="project" />
   </component>
 </module>
 

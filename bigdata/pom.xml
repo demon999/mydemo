@@ -12,7 +12,16 @@
 
     <properties>
         <spring.data.hadoop>2.0.2.RELEASE</spring.data.hadoop>
+        <spring.data.gemfire.version>1.5.1.RELEASE</spring.data.gemfire.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-gemfire</artifactId>
+            <version>${spring.data.gemfire.version}</version>
+        </dependency>
+    </dependencies>
 
     <!--
     <dependencies>
