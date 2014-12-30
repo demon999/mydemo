@@ -1,6 +1,7 @@
 package com.snow.redis.message;
 
 import org.aspectj.weaver.Iterators;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.io.Serializable;
@@ -11,7 +12,7 @@ import java.util.Map;
 /**
  * Created by Richard on 2014/12/29.
  */
-@Service("messageDelegateListener")
+@Component("messageDelegateListener")
 public class MessageDelegateListenerImpl implements MessageDelegateListener {
     @Override
     public void handleMessage(Serializable message) {

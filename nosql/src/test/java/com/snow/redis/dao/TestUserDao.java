@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by Richard on 14-8-25.
  */
-@ContextConfiguration(locations = {"classpath*:applicationContext.xml"})
+@ContextConfiguration(locations = {"classpath*:spring-redis.xml"})
 public class TestUserDao extends AbstractJUnit4SpringContextTests {
     @Autowired
     private IUserDao userDao;

@@ -1,6 +1,5 @@
 package com.snow.util;
 
-import org.apache.commons.lang3.RandomStringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,7 +22,8 @@ public final class FileUtil {
      * @return
      */
     public static String shaFileName() {
-        String origin = RandomStringUtils.randomAlphanumeric(FILENAME_LENGTH)+System.currentTimeMillis();
+//        String origin = RandomStringUtils.randomAlphanumeric(FILENAME_LENGTH)+System.currentTimeMillis();
+        String origin = System.currentTimeMillis()+"";
         return CryptoUtil.sha(origin);
     }
 
