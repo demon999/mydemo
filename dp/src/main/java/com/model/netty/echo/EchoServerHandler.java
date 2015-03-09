@@ -1,4 +1,4 @@
-package com.model.netty;
+package com.model.netty.echo;
 
 /**
  * Created by Richard on 2014/12/31.
