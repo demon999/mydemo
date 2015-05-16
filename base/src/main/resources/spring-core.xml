@@ -5,32 +5,39 @@
        xmlns:oxm="http://www.springframework.org/schema/oxm"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:jpa="http://www.springframework.org/schema/data/jpa"
-       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:task="http://www.springframework.org/schema/task" xmlns:lang="http://www.springframework.org/schema/lang"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
          http://www.springframework.org/schema/oxm
          http://www.springframework.org/schema/oxm/spring-oxm.xsd
          http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
-         http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
-<context:property-placeholder location="classpath*:/config.properties" file-encoding="GBK"/>
-<context:component-scan base-package="com.snow">
-    <context:exclude-filter type="regex" expression="com.snow"/>
-</context:component-scan>
-<context:spring-configured/>
-<task:annotation-driven/>
-<jpa:auditing/>
-<jpa:repositories base-package="com.snow"/>
-<tx:annotation-driven/>
-<oxm:jaxb2-marshaller id="jaxbMarshaller">
-    <oxm:class-to-be-bound name="com.snow.oxmapper.SpringIntegration"/>
-</oxm:jaxb2-marshaller>
-<bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
-    <property name="messageConverters">
-        <list>
-            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
-                <constructor-arg value="#{T(java.nio.charset.Charset).forName('UTF-8')}"/>
-            </bean>
-        </list>
-    </property>
-</bean>
+         http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+         http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
+         http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd">
+    <context:property-placeholder location="classpath*:/config.properties" file-encoding="GBK"/>
+    <context:component-scan base-package="com.snow">
+        <context:exclude-filter type="regex" expression="com.snow"/>
+    </context:component-scan>
+    <context:spring-configured/>
+    <task:annotation-driven/>
+    <jpa:auditing/>
+    <jpa:repositories base-package="com.snow"/>
+    <tx:annotation-driven/>
+    <oxm:jaxb2-marshaller id="jaxbMarshaller">
+        <oxm:class-to-be-bound name="com.snow.oxmapper.SpringIntegration"/>
+    </oxm:jaxb2-marshaller>
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+        <property name="messageConverters">
+            <list>
+                <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                    <constructor-arg value="#{T(java.nio.charset.Charset).forName('UTF-8')}"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+<!--    <lang:groovy id="messenger" script-source="classpath:Message.groovy">
+        <lang:property name="message" value="I Can Do The Frug" />
+    </lang:groovy>-->
+
 </beans>
