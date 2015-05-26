@@ -22,7 +22,7 @@
     <properties>
         <java.version>1.7</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.core.version>4.0.1.RELEASE</spring.core.version>
+        <spring.core.version>4.1.6.RELEASE</spring.core.version>
         <spring.security.version>3.2.0.RELEASE</spring.security.version>
         <spring.asm.version>3.1.4.RELEASE</spring.asm.version>
 
@@ -216,12 +216,29 @@
             <artifactId>yuicompressor</artifactId>
             <version>2.4.7</version>
         </dependency>
-
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>spring-snapshots</id>
+            <url>http://repo.spring.io/libs-snapshot</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-snapshots</id>
+            <url>http://repo.spring.io/libs-snapshot</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <build>
         <finalName>${project.artifactId}</finalName>
         <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
