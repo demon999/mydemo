@@ -1,28 +1,31 @@
 package com.snow.boot;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import java.util.Arrays;
 
 /**
  * @author Richard Xue
  * @version 1.0
  * @date 05/26/2015
  * @description
+ * @see -- http://spring.io/guides/gs/spring-boot/
  */
-@RestController
-@RequestMapping
-@EnableAutoConfiguration
+@SpringBootApplication
 public class Application {
 
-    @RequestMapping("/")
-    public String home() {
-        return "Hello";
-    }
-
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        ApplicationContext ctx = SpringApplication.run(Application.class, args);
+
+        System.out.println("Let's inspect the beans provided by Spring Boot:");
+
+        String[] beanNames = ctx.getBeanDefinitionNames();
+        Arrays.sort(beanNames);
+        for (String beanName : beanNames) {
+            System.out.println(beanName);
+        }
     }
 
 }
