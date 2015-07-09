@@ -2,8 +2,10 @@ package com.snow.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
-public class TestServiceImpl implements ITestService {
+@Service("testService")
+public class TestServiceImpl implements TestService {
 	
 	private static Logger log = LoggerFactory.getLogger(TestServiceImpl.class);
 

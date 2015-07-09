@@ -1,6 +1,6 @@
 package com.snow.service;
 
-public interface ITestService {
+public interface TestService {
 	
 	public void setName(String name);
 	

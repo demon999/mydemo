@@ -1,5 +1,7 @@
 package com.xxx.es;
 
+import org.elasticsearch.action.delete.DeleteResponse;
+import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.ImmutableSettings;
@@ -23,6 +25,13 @@ public class Sample {
     public void test() {
         Node node = NodeBuilder.nodeBuilder().node();
         Client client = node.client();
+
+        GetResponse getResponse = client.prepareGet("twitter", "tweet", "1").execute().actionGet();
+
+        System.out.println(getResponse.getIndex());
+
+        DeleteResponse deleteResponse = client.prepareDelete("twitter", "tweet", "1").execute().actionGet();
+
         client.close();
         node.close();
     }
