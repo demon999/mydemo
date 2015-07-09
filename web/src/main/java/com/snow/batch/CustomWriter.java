@@ -15,7 +15,7 @@ public class CustomWriter implements ItemWriter<Report> {
     public void write(List<? extends Report> list) throws Exception {
         System.out.println("writer..." + list.size());
         for(Report item : list){
-            System.out.println(item);
+            System.out.println("done >>>>> "+item.getName());
         }
     }
 }

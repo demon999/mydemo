@@ -22,7 +22,7 @@ public class CustomReader implements ItemReader<Report> {
     public Report read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
         double flag = random.nextDouble();
         logger.info("flag >>>>> "+flag);
-        if(flag < 0.5) {
+        if(flag < 0.3) {
             return null;
         }
         Report report = new Report();
