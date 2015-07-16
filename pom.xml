@@ -18,6 +18,7 @@
         <module>bigdata</module>
         <module>mq</module>
         <module>log</module>
+        <module>test</module>
     </modules>
 
     <properties>
