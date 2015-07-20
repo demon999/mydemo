@@ -3,6 +3,11 @@ package cn.snow
 /**
  * Created by Administrator on 05/16/2015.
  */
-class TestGroovy {
+
+def process = "java -version".execute()
+println(process)
+println "Found text ${process.text}"
+
+class Test {
 
 }
