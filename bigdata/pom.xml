@@ -26,6 +26,12 @@
             <artifactId>spring-data-hadoop</artifactId>
             <version>${spring.data.hadoop}</version>
         </dependency>
+
+<!--        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.11</artifactId>
+            <version>1.4.1</version>
+        </dependency>-->
     </dependencies>
 
 </project>
