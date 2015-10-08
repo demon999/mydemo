@@ -40,6 +40,12 @@
             <artifactId>netty-all</artifactId>
             <version>4.0.24.Final</version>
         </dependency>
+        <!-- MINA -->
+        <dependency>
+            <groupId>org.apache.mina</groupId>
+            <artifactId>mina-core</artifactId>
+            <version>2.0.9</version>
+        </dependency>
 
         <!-- RSS parser -->
         <dependency>
