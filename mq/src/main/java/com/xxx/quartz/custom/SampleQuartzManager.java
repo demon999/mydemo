@@ -32,23 +32,23 @@ public class SampleQuartzManager implements QuartzManager {
     }
 
     @Override
-    public void modifyJob(JobConfig config) {
-
+    public void modifyJob(JobConfig config) throws SchedulerException {
+        scheduler.rescheduleJob(TriggerKey.triggerKey(config.getTriggerKey(),config.getTriggerGroup()), config.getTrigger());
     }
 
     @Override
-    public void resumeJob(JobConfig config) {
-
+    public void resumeJob(JobConfig config) throws SchedulerException {
+        scheduler.resumeJob(JobKey.jobKey(config.getJobKey(), config.getJobGroup()));
     }
 
     @Override
-    public void pauseJob(JobConfig config) {
-
+    public void pauseJob(JobConfig config) throws SchedulerException {
+        scheduler.pauseJob(JobKey.jobKey(config.getJobKey(), config.getJobGroup()));
     }
 
     @Override
-    public void removeJob(JobConfig config) {
-
+    public void deleteJob(JobConfig config) throws SchedulerException {
+        scheduler.deleteJob(JobKey.jobKey(config.getJobKey(), config.getJobGroup()));
     }
 
     @Override

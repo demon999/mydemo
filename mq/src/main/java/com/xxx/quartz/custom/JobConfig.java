@@ -1,5 +1,7 @@
 package com.xxx.quartz.custom;
 
+import org.quartz.Trigger;
+
 import java.io.Serializable;
 
 /**
@@ -13,6 +15,7 @@ public class JobConfig implements Serializable {
     private String jobGroup;
     private String triggerKey;
     private String triggerGroup;
+    private Trigger trigger;
 
     public String getJobKey() {
         return jobKey;
@@ -44,5 +47,13 @@ public class JobConfig implements Serializable {
 
     public void setTriggerGroup(String triggerGroup) {
         this.triggerGroup = triggerGroup;
+    }
+
+    public Trigger getTrigger() {
+        return trigger;
+    }
+
+    public void setTrigger(Trigger trigger) {
+        this.trigger = trigger;
     }
 }
