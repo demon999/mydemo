@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+       <context:component-scan base-package="com.xxx"/>
+
+       <bean name="exampleJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+              <property name="jobClass" value="com.xxx.quartz.sample.ExampleJob"/>
+              <property name="jobDataAsMap">
+                     <map>
+                            <entry key="timeout" value="1"/>
+                     </map>
+              </property>
+       </bean>
+
+       <bean id="exampleBusinessObject" class="com.xxx.quartz.sample.ExampleBusinessObject"/>
+       <bean id="jobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+              <property name="targetObject" ref="exampleBusinessObject"/>
+              <property name="targetMethod" value="doIt"/>
+              <property name="concurrent" value="false" />
+       </bean>
+
+       <bean id="simpleTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+              <property name="jobDetail" ref="jobDetail"/>
+              <property name="startDelay" value="10"/>
+              <property name="repeatInterval" value="5000"/>
+       </bean>
+
+       <bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+              <property name="jobDetail" ref="jobDetail" />
+              <property name="cronExpression" value="0/5 * * * * ?" />
+       </bean>
+
+       <bean id="startQuertz" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+              <property name="triggers">
+                     <list>
+                            <ref bean="cronTrigger"/>
+                            <!--<ref bean="simpleTrigger"/>-->
+                     </list>
+              </property>
+       </bean>
+</beans>
