@@ -11,7 +11,7 @@
 
     <artifactId>base</artifactId>
 
-    <repositories>
+<!--    <repositories>
         <repository>
             <id>qi4j-releases</id>
             <url>https://repository-qi4j.forge.cloudbees.com/release/</url>
@@ -22,7 +22,7 @@
             <releases><enabled>false</enabled></releases>
             <snapshots><enabled>true</enabled></snapshots>
         </repository>
-    </repositories>
+    </repositories>-->
 
     <properties>
         <fastjson.version>1.2.3</fastjson.version>
@@ -73,7 +73,8 @@
             <version>2.0.7</version>
         </dependency>
 
-        <dependency>
+        <!-- qi4j -->
+        <!--<dependency>
             <groupId>org.qi4j.core</groupId>
             <artifactId>org.qi4j.core.bootstrap</artifactId>
             <version>${qi4j.version}</version>
@@ -89,7 +90,7 @@
             <artifactId>org.qi4j.core.testsupport</artifactId>
             <version>${qi4j.version}</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>com.belerweb</groupId>
@@ -111,6 +112,7 @@
             <version>1.6</version>
         </dependency>
 
+        <!-- Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
