@@ -119,11 +119,7 @@ public class Keygen {
     }
 
     public static void main(String[] args) {
-        if (args.length == 0) {
-            System.err.printf("*** Usage: %s name%n", Keygen.class.getCanonicalName());
-            System.exit(1);
-        }
         Random r = new Random();
-        System.out.println(MakeKey(args[0], 0, r.nextInt(100000)));
+        System.out.println(MakeKey("xxxxx", 0, r.nextInt(100000)));
     }
 }
