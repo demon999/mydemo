@@ -4,5 +4,11 @@
  * Created by Administrator on 05/16/2015.
  */
 
+3.times {
+    println("${it}")
+}
 
-println("xxx");
+def process = "java -version".execute()
+println(process)
+println "Found text ${process.text}"
+
