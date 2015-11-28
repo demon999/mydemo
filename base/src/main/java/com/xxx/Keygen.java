@@ -120,6 +120,6 @@ public class Keygen {
 
     public static void main(String[] args) {
         Random r = new Random();
-        System.out.println(MakeKey("xxxxx", 0, r.nextInt(100000)));
+        System.out.println(MakeKey("abc123xxx", 0, r.nextInt(100000)));
     }
 }
