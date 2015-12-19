@@ -1,6 +1,5 @@
 package cn.snow.main;
 
-import cn.snow.sample.Hello;
 
 /**
  * @author Richard Xue
@@ -9,8 +8,8 @@ import cn.snow.sample.Hello;
  * @description
  */
 public class Test {
-    public static void main(String[] args) {
-        Hello hello = new Hello();
-        hello.helloWorld();
-    }
+//    public static void main(String[] args) {
+//        Hello hello = new Hello();
+//        hello.helloWorld();
+//    }
 }
