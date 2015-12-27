@@ -8,7 +8,7 @@ import javax.servlet.http.HttpSessionListener;
  * @author xue_liming
  *
  */
-public class SessoinListenerImpl implements HttpSessionListener {
+public class SessionListenerImpl implements HttpSessionListener {
 
 	private int count = 0;
 	
@@ -16,7 +16,7 @@ public class SessoinListenerImpl implements HttpSessionListener {
 	
 	public void sessionCreated(HttpSessionEvent event) {
 		count++;
-		System.out.println("SessoinListenerImpl ---> sessionCreated");
+		System.out.println("SessionListenerImpl ---> sessionCreated");
 		System.out.println("count="+count);
 		event.getSession().setAttribute("onlineUserBindingListener", new SessionBindingListenerImpl("username1"));
 		if(count >= max) {
@@ -26,7 +26,7 @@ public class SessoinListenerImpl implements HttpSessionListener {
 
 	public void sessionDestroyed(HttpSessionEvent event) {
 		count--;
-		System.out.println("SessoinListenerImpl ---> sessionDestroyed");
+		System.out.println("SessionListenerImpl ---> sessionDestroyed");
 		System.out.println("count="+count);
 	}
 
