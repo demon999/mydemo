@@ -2,6 +2,9 @@ package com.snow.concurrent.lock;
 
 import java.util.concurrent.atomic.AtomicReference;
 
+/**
+ * 自旋锁
+ */
 public class SpinLock {
     private AtomicReference<Thread> sign = new AtomicReference<>();
 
@@ -16,8 +19,17 @@ public class SpinLock {
         sign.compareAndSet(current, null);
     }
 
-    public void test() {
-
+    public static void main(String[] args) {
+        System.out.println(">>>");
+        SpinLock spinLock = new SpinLock();
+        spinLock.lock();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        spinLock.unlock();
+        System.out.println("<<<");
     }
 
 }
