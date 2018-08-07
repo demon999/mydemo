@@ -9,11 +9,11 @@ import org.quartz.SchedulerException;
  * @description
  */
 public interface QuartzManager {
-    public void addJob(JobConfig config) throws SchedulerException;
-    public void modifyJob(JobConfig config) throws SchedulerException;
-    public void resumeJob(JobConfig config) throws SchedulerException;
-    public void pauseJob(JobConfig config) throws SchedulerException;
-    public void deleteJob(JobConfig config) throws SchedulerException;
-    public void resumeAll() throws SchedulerException;
-    public void pauseAll() throws SchedulerException;
+    void addJob(JobConfig config) throws SchedulerException;
+    void modifyJob(JobConfig config) throws SchedulerException;
+    void resumeJob(JobConfig config) throws SchedulerException;
+    void pauseJob(JobConfig config) throws SchedulerException;
+    void deleteJob(JobConfig config) throws SchedulerException;
+    void resumeAll() throws SchedulerException;
+    void pauseAll() throws SchedulerException;
 }

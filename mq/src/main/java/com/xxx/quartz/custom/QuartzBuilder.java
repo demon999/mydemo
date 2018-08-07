@@ -11,7 +11,7 @@ import org.quartz.Trigger;
  * @description
  */
 public interface QuartzBuilder {
-    public Job buildJob();
-    public JobDetail buildJobDetail();
-    public Trigger buildTrigger();
+    Job buildJob();
+    JobDetail buildJobDetail();
+    Trigger buildTrigger();
 }
