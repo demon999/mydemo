@@ -7,6 +7,7 @@ import java.lang.reflect.Proxy;
 public class JdkProxyTest {
 
     public static void main(String[] args) {
+        // ProxyGenerator
         MyJdkProxy myJdkProxy = new MyJdkProxy();
         MyInterface jdkProxy = (MyInterface) myJdkProxy.getJdkProxy(new MyInterfaceImpl());
         jdkProxy.say("world!");
@@ -15,7 +16,7 @@ public class JdkProxyTest {
 }
 
 class MyJdkProxy implements InvocationHandler {
-    private Object target ;
+    private Object target;
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
