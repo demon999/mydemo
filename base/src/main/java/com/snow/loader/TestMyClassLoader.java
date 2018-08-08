@@ -1,4 +1,4 @@
-package com.snow.boot;
+package com.snow.loader;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
