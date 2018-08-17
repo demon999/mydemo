@@ -1,7 +1,9 @@
 package com.snow.disruptor;
 
+import com.lmax.disruptor.BlockingWaitStrategy;
 import com.lmax.disruptor.RingBuffer;
 import com.lmax.disruptor.dsl.Disruptor;
+import com.lmax.disruptor.dsl.ProducerType;
 
 import java.nio.ByteBuffer;
 import java.util.concurrent.Executor;
@@ -21,17 +23,14 @@ public class LongEventMain {
         int bufferSize = 1024;
 
         // Construct the Disruptor
-        Disruptor<LongEvent> disruptor = new Disruptor<>(factory, bufferSize, new ThreadFactory() {
-            @Override
-            public Thread newThread(Runnable r) {
-                Thread t = new Thread(r);
-                t.setDaemon(true);
-                return t;
-            }
-        });
+//        Disruptor<LongEvent> disruptor = new Disruptor<>(factory, bufferSize, new LongEventThreadFactory("longevent"));
+
+        Disruptor<LongEvent> disruptor = new Disruptor<>(factory, bufferSize, new LongEventThreadFactory("longevent")
+                ,ProducerType.SINGLE, new BlockingWaitStrategy());
 
         // Connect the handler
         disruptor.handleEventsWith(new LongEventHandler());
+
 
         // Start the Disruptor, starts all threads running
         disruptor.start();
