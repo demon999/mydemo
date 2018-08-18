@@ -2,6 +2,7 @@ package com.snow.disruptor;
 
 import com.lmax.disruptor.BlockingWaitStrategy;
 import com.lmax.disruptor.RingBuffer;
+import com.lmax.disruptor.SequenceBarrier;
 import com.lmax.disruptor.dsl.Disruptor;
 import com.lmax.disruptor.dsl.ProducerType;
 
@@ -37,6 +38,8 @@ public class LongEventMain {
 
         // Get the ring buffer from the Disruptor to be used for publishing.
         RingBuffer<LongEvent> ringBuffer = disruptor.getRingBuffer();
+
+        SequenceBarrier barrier = ringBuffer.newBarrier();
 
         LongEventProducer producer = new LongEventProducer(ringBuffer);
 
