@@ -5,10 +5,10 @@ package com.xxx.mq.kafka;
  */
 public class KafkaConsumerProducerDemo {
     public static void main(String[] args) {
-        KafkaProducer producerThread = new KafkaProducer(KafkaProperties.topic);
+        MyKafkaProducer producerThread = new MyKafkaProducer(KafkaProperties.topic);
         producerThread.start();
 
-        KafkaConsumer consumerThread = new KafkaConsumer(KafkaProperties.topic);
-        consumerThread.start();
+//        MyKafkaConsumer consumerThread = new MyKafkaConsumer(KafkaProperties.topic);
+//        consumerThread.start();
     }
 }
