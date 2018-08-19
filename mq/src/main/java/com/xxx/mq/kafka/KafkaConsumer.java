@@ -1,7 +1,6 @@
 package com.xxx.mq.kafka;
 
 
-
 import kafka.consumer.Consumer;
 import kafka.consumer.ConsumerConfig;
 import kafka.consumer.ConsumerIterator;
@@ -21,14 +20,12 @@ public class KafkaConsumer extends Thread {
     private final ConsumerConnector consumer;
     private final String topic;
 
-    public KafkaConsumer(String topic)
-    {
+    public KafkaConsumer(String topic) {
         consumer = Consumer.createJavaConsumerConnector(createConsumerConfig());
         this.topic = topic;
     }
 
-    private static ConsumerConfig createConsumerConfig()
-    {
+    private static ConsumerConfig createConsumerConfig() {
         Properties props = new Properties();
         props.put("zookeeper.connect", KafkaProperties.zkConnect);
         props.put("group.id", KafkaProperties.groupId);
