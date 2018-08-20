@@ -43,7 +43,7 @@ public class MyKafkaProducer extends Thread {
             });
             messageNo++;
             try {
-                sleep(3000);
+                sleep(300000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
