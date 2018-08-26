@@ -11,10 +11,10 @@
 
     <modules>
         <module>dp</module>
+        <module>log</module>
         <module>web</module>
         <module>nosql</module>
         <module>base</module>
-        <module>rest</module>
         <module>bigdata</module>
         <module>mq</module>
         <module>boot</module>
