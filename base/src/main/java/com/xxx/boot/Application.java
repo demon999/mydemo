@@ -1,4 +1,4 @@
-package com.snow.boot;
+package com.xxx.boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

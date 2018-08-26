@@ -1,4 +1,4 @@
-package com.snow.boot;
+package com.xxx.boot;
 
 import org.hamcrest.Matchers;
 import org.junit.Assert;
