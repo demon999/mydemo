@@ -13,6 +13,7 @@ public class PrintTreeByLayer {
         Queue<Entry> queue = new ConcurrentLinkedQueue<>();
         queue.offer(printTree.root);
         printTree.printByLayer(queue);
+        System.out.println();
     }
 
     public void printByLayer(Queue<Entry> queue) {
