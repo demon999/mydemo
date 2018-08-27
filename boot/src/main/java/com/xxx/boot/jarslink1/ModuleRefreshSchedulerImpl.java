@@ -1,4 +1,4 @@
-package com.xxx.boot.jarslink;
+package com.xxx.boot.jarslink1;
 
 import com.alipay.jarslink.api.ModuleConfig;
 import com.alipay.jarslink.api.impl.AbstractModuleRefreshScheduler;

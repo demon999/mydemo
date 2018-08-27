@@ -6,7 +6,7 @@ import com.alipay.jarslink.api.ModuleLoader;
 import com.alipay.jarslink.api.ModuleManager;
 import com.alipay.jarslink.api.impl.ModuleLoaderImpl;
 import com.alipay.jarslink.api.impl.ModuleManagerImpl;
-import com.xxx.boot.jarslink.ModuleRefreshSchedulerImpl;
+import com.xxx.boot.jarslink1.ModuleRefreshSchedulerImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.ApplicationContext;
