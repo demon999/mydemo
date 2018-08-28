@@ -10,7 +10,6 @@ import java.util.Date;
 /**
  * Created by Richard on 14-8-26.
  */
-@EnableAutoConfiguration
 @EnableScheduling
 public class ScheduledTasks {
 

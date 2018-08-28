@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by Administrator on 14-6-24.
  */
 @RestController
-@EnableAutoConfiguration
 public class SimpleController {
 
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
@@ -18,7 +17,4 @@ public class SimpleController {
         return "hello world!";
     }
 
-    public static void main(String[] args) {
-        SpringApplication.run(SimpleController.class,args);
-    }
 }

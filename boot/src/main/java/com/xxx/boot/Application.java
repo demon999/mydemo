@@ -9,6 +9,7 @@ import com.alipay.jarslink.api.impl.ModuleManagerImpl;
 import com.xxx.boot.jarslink1.ModuleRefreshSchedulerImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -19,8 +20,7 @@ import java.util.Arrays;
 /**
  * Created by Richard on 14-8-26.
  */
-@Configuration
-@EnableAutoConfiguration
+@SpringBootApplication
 @ComponentScan
 public class Application {
     @Bean

@@ -19,8 +19,8 @@ public class HelloWorldController {
     private final AtomicLong counter = new AtomicLong();
 
     @RequestMapping(method= RequestMethod.GET)
-    public @ResponseBody
-    Greeting sayHello(@RequestParam(value="name", required=false, defaultValue="Stranger") String name) {
+    @ResponseBody
+    public Greeting sayHello(@RequestParam(value="name", required=false, defaultValue="Stranger") String name) {
         return new Greeting(counter.incrementAndGet(), String.format(template, name));
     }
 
