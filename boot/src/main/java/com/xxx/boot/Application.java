@@ -21,7 +21,6 @@ import java.util.Arrays;
  * Created by Richard on 14-8-26.
  */
 @SpringBootApplication
-@ComponentScan
 public class Application {
     @Bean
     public ModuleLoader moduleLoader() {

@@ -292,16 +292,16 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <doclet>de.mvbonline.tools.restapidoc.doclet.JavadocToXMLDoclet</doclet>
-                    <docletArtifact>
-                        <groupId>de.mvbonline</groupId>
-                        <artifactId>restapi-doc</artifactId>
-                        <version>0.0.1-SNAPSHOT</version>
-                    </docletArtifact>
-                    <useStandardDocletOptions>false</useStandardDocletOptions>
-                    <reportOutputDirectory>${project.build.outputDirectory}/META-INF</reportOutputDirectory>
-                </configuration>
+                <!--<configuration>-->
+                    <!--<doclet>de.mvbonline.tools.restapidoc.doclet.JavadocToXMLDoclet</doclet>-->
+                    <!--<docletArtifact>-->
+                        <!--<groupId>de.mvbonline</groupId>-->
+                        <!--<artifactId>restapi-doc</artifactId>-->
+                        <!--<version>0.0.1-SNAPSHOT</version>-->
+                    <!--</docletArtifact>-->
+                    <!--<useStandardDocletOptions>false</useStandardDocletOptions>-->
+                    <!--<reportOutputDirectory>${project.build.outputDirectory}/META-INF</reportOutputDirectory>-->
+                <!--</configuration>-->
             </plugin>
 
             <plugin>
