@@ -19,7 +19,7 @@ public class TestSemaphore {
                     // 获取许可
                     semp.acquire();
                     System.out.println("Accessing: " + NO);
-                    Thread.sleep((long) (Math.random() * 10000));
+                    Thread.sleep((long) (Math.random() * 1000));
                     // 访问完后，释放
                     semp.release();
                     System.out.println("-----------------" + semp.availablePermits());
