@@ -14,7 +14,7 @@
         <spring.data.commons.version>2.1.9.RELEASE</spring.data.commons.version>
         <spring.data.mongodb.version>2.1.9.RELEASE</spring.data.mongodb.version>
         <spring.data.redis.version>2.1.9.RELEASE</spring.data.redis.version>
-        <mongodb.version>3.10.2</mongodb.version>
+        <mongodb.version>3.10.1</mongodb.version>
         <jedis.version>2.10.2</jedis.version>
         <xmemcached.version>2.0.0</xmemcached.version>
     </properties>
@@ -36,9 +36,9 @@
             <version>${mongodb.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.mongodb.morphia</groupId>
-            <artifactId>morphia</artifactId>
-            <version>1.3.2</version>
+            <groupId>dev.morphia.morphia</groupId>
+            <artifactId>core</artifactId>
+            <version>1.5.3</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.data</groupId>

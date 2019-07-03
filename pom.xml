@@ -11,7 +11,7 @@
 
     <modules>
         <module>dp</module>
-        <module>log</module>
+        <module>search</module>
         <module>web</module>
         <module>nosql</module>
         <module>base</module>
@@ -30,7 +30,7 @@
         <jackson.core.version>2.9.9</jackson.core.version>
 
         <slf4j.api.version>1.7.12</slf4j.api.version>
-        <logback.version>1.1.2</logback.version>
+        <logback.version>1.2.3</logback.version>
         <log4j.version>1.2.17</log4j.version>
         <slf4j.log4j.version>1.7.12</slf4j.log4j.version>
 
