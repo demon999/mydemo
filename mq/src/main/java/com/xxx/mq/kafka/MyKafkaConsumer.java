@@ -10,7 +10,7 @@ import org.apache.kafka.common.TopicPartition;
 import java.util.*;
 
 /**
- * Created by xueliming on 9/7/14.
+ * Created by richard.xue on 9/7/14.
  */
 public class MyKafkaConsumer extends Thread {
     private final Consumer<Integer, String> kafkaConsumer;

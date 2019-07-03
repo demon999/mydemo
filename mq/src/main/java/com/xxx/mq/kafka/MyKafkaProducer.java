@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * Created by xueliming on 9/7/14.
+ * Created by richard.xue on 9/7/14.
  */
 public class MyKafkaProducer extends Thread {
     private final Producer<Integer, String> producer;

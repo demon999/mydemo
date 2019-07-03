@@ -5,7 +5,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
 /**
- * Created by xueliming on 3/16/16.
+ * Created by richard.xue on 3/16/16.
  */
 public class JaxbSample {
 

@@ -5,7 +5,7 @@ import com.mongodb.*;
 import java.net.UnknownHostException;
 
 /**
- * Created by xueliming on 14-6-21.
+ * Created by richard.xue on 14-6-21.
  */
 public class Test {
     public static void main(String[] arg) {

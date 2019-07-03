@@ -37,13 +37,12 @@
         </repositories>-->
 
     <properties>
-        <fastjson.version>1.2.3</fastjson.version>
+        <fastjson.version>1.2.58</fastjson.version>
         <xstream.version>1.4.7</xstream.version>
         <jaxb.version>2.2.11</jaxb.version>
         <testng.version>6.8.8</testng.version>
         <qi4j.version>2.0</qi4j.version>
         <pinyin4j.version>2.5.0</pinyin4j.version>
-        <spring.boot.version>1.2.3.RELEASE</spring.boot.version>
     </properties>
 
     <dependencies>
@@ -88,12 +87,6 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.mina</groupId>
-            <artifactId>mina-core</artifactId>
-            <version>2.0.7</version>
-        </dependency>
-
         <!-- qi4j -->
         <!--<dependency>
             <groupId>org.qi4j.core</groupId>
@@ -133,49 +126,16 @@
             <version>1.6</version>
         </dependency>
 
-        <!-- Spring Boot -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-            <version>${spring.boot.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>${spring.boot.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <version>${spring.boot.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-            <version>${spring.boot.version}</version>
-        </dependency>
-<!--        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jetty</artifactId>
-            <version>${spring.boot.version}</version>
-        </dependency>-->
-<!--        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-            <version>${spring.boot.version}</version>
-        </dependency>-->
-
-        <dependency>
+        <!--<dependency>
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-all</artifactId>
-            <version>2.4.3</version>
-        </dependency>
+            <version>2.5.7</version>
+        </dependency>-->
 
         <dependency>
             <groupId>org.apache.thrift</groupId>
             <artifactId>libthrift</artifactId>
-            <version>0.9.3</version>
+            <version>0.12.0</version>
         </dependency>
 
         <!--<dependency>

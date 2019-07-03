@@ -1,7 +1,7 @@
 package com.xxx.boot;
 
 /**
- * Created by xueliming on 14-8-26.
+ * Created by richard.xue on 14-8-26.
  */
 public class Greeting {
 

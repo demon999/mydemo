@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Created by xueliming on 3/16/16.
+ * Created by richard.xue on 3/16/16.
  */
 @XmlType
 @XmlRootElement( name = "Country" )

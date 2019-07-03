@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * Created by xueliming on 14-8-26.
+ * Created by richard.xue on 14-8-26.
  */
 @Controller
 @RequestMapping("/hello-world")

@@ -1,7 +1,7 @@
 package com.snow.test;
 
 /**
- * Created by xueliming on 14-6-22.
+ * Created by richard.xue on 14-6-22.
  */
 public class Calcuator {
     public double add(double n1, double n2) {

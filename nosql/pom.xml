@@ -11,13 +11,12 @@
     <artifactId>nosql</artifactId>
 
     <properties>
-        <spring.data.commons.version>1.8.0.RELEASE</spring.data.commons.version>
-        <spring.data.mongodb.version>1.5.0.RELEASE</spring.data.mongodb.version>
-        <spring.data.redis.version>1.3.0.RELEASE</spring.data.redis.version>
-        <mongodb.version>3.1.0</mongodb.version>
-        <jedis.version>2.9.0</jedis.version>
+        <spring.data.commons.version>2.1.9.RELEASE</spring.data.commons.version>
+        <spring.data.mongodb.version>2.1.9.RELEASE</spring.data.mongodb.version>
+        <spring.data.redis.version>2.1.9.RELEASE</spring.data.redis.version>
+        <mongodb.version>3.10.2</mongodb.version>
+        <jedis.version>2.10.2</jedis.version>
         <xmemcached.version>2.0.0</xmemcached.version>
-        <cassandra.version>3.0.0</cassandra.version>
     </properties>
 
     <dependencies>
@@ -65,7 +64,6 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>4.1.3.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -94,22 +92,22 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.9</version>
+            <version>1.7.26</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
-            <version>1.1.2</version>
+            <version>1.2.3</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.1.2</version>
+            <version>1.2.3</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-access</artifactId>
-            <version>1.1.2</version>
+            <version>1.2.3</version>
         </dependency>
         <!-- Utils -->
         <dependency>
@@ -132,7 +130,7 @@
         <dependency>
             <groupId>org.apache.zookeeper</groupId>
             <artifactId>zookeeper</artifactId>
-            <version>3.4.6</version>
+            <version>3.5.5</version>
         </dependency>
 
         <dependency>
@@ -144,20 +142,14 @@
         <dependency>
             <groupId>org.apache.curator</groupId>
             <artifactId>curator-framework</artifactId>
-            <version>4.0.1</version>
+            <version>4.2.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.curator</groupId>
             <artifactId>curator-recipes</artifactId>
-            <version>4.0.1</version>
+            <version>4.2.0</version>
         </dependency>
 
-
-        <dependency>
-            <groupId>com.orientechnologies</groupId>
-            <artifactId>orientdb-graphdb</artifactId>
-            <version>2.1.11</version>
-        </dependency>
     </dependencies>
 
     <!--   <profiles>

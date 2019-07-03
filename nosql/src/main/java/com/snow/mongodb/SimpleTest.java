@@ -6,7 +6,7 @@ import com.mongodb.util.JSON;
 import java.net.UnknownHostException;
 
 /**
- * Created by xueliming on 14-6-22.
+ * Created by richard.xue on 14-6-22.
  */
 public class SimpleTest {
     public static void main(String[] args) throws UnknownHostException, MongoException {

@@ -1,7 +1,7 @@
 package com.snow.qi4j;
 
 /**
- * Created by xueliming on 14-8-5.
+ * Created by richard.xue on 14-8-5.
  */
 public class Main {
     public static void main(String[] args) throws Exception {

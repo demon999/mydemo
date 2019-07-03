@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 /**
- * Created by xueliming on 3/16/16.
+ * Created by richard.xue on 3/16/16.
  */
 @XmlRootElement(name = "Countries")
 public class Countries {

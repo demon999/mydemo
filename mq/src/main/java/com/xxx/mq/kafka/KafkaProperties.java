@@ -1,7 +1,7 @@
 package com.xxx.mq.kafka;
 
 /**
- * Created by xueliming on 9/7/14.
+ * Created by richard.xue on 9/7/14.
  */
 public interface KafkaProperties {
     String zkConnect = "127.0.0.1:2181";
