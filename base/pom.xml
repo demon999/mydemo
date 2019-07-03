@@ -120,11 +120,11 @@
         </dependency>
 
         <!-- Fake SMTP Server 1.10 -->
-        <dependency>
+        <!--<dependency>
             <groupId>dumbster</groupId>
             <artifactId>dumbster</artifactId>
             <version>1.6</version>
-        </dependency>
+        </dependency>-->
 
         <!--<dependency>
             <groupId>org.codehaus.groovy</groupId>
