@@ -49,7 +49,6 @@ public class Application {
             System.out.println(beanName);
         }
 
-
         ModuleManager moduleManager = ctx.getBean(ModuleManager.class);
         //查找模块
         Module findModule = moduleManager.find("demo");
