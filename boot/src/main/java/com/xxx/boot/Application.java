@@ -22,20 +22,20 @@ import java.util.Arrays;
  */
 @SpringBootApplication
 public class Application {
-    @Bean
-    public ModuleLoader moduleLoader() {
-        return new ModuleLoaderImpl();
-    }
-
-    @Bean
-    public ModuleManager moduleManager() {
-        return new ModuleManagerImpl();
-    }
-
-    @Bean
-    public ModuleRefreshSchedulerImpl moduleRefreshScheduler () {
-        return new ModuleRefreshSchedulerImpl();
-    }
+//    @Bean
+//    public ModuleLoader moduleLoader() {
+//        return new ModuleLoaderImpl();
+//    }
+//
+//    @Bean
+//    public ModuleManager moduleManager() {
+//        return new ModuleManagerImpl();
+//    }
+//
+//    @Bean
+//    public ModuleRefreshSchedulerImpl moduleRefreshScheduler () {
+//        return new ModuleRefreshSchedulerImpl();
+//    }
 
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
@@ -49,6 +49,7 @@ public class Application {
             System.out.println(beanName);
         }
 
+        /*
         ModuleManager moduleManager = ctx.getBean(ModuleManager.class);
         //查找模块
         Module findModule = moduleManager.find("demo");
@@ -58,7 +59,7 @@ public class Application {
         moduleConfig.setName("h");
         moduleConfig.setEnabled(true);
         ModuleConfig result = findModule.doAction(actionName, moduleConfig);
-
+        */
 
     }
 

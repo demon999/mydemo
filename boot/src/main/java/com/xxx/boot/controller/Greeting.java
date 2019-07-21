@@ -1,4 +1,4 @@
-package com.xxx.boot;
+package com.xxx.boot.controller;
 
 /**
  * Created by richard.xue on 14-8-26.
