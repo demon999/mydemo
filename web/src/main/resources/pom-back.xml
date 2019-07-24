@@ -223,7 +223,7 @@
 		<httpclient.version>4.2.2</httpclient.version>
 		<jboss-as-maven-plugin.version>7.1.1.Final</jboss-as-maven-plugin.version>
 		<bonecp.version>0.8.0-alpha1</bonecp.version>
-		<guava.version>12.0</guava.version>
+		<guava.version>28.0-jre</guava.version>
 		<jtds.version>1.2</jtds.version>
 		<commons-logging.version>1.1.1</commons-logging.version>
 		<commons-pool.version>1.6</commons-pool.version>
