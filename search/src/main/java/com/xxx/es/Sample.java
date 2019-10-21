@@ -4,11 +4,11 @@ import org.elasticsearch.action.delete.DeleteResponse;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.client.transport.TransportClient;
-import org.elasticsearch.common.settings.ImmutableSettings;
-import org.elasticsearch.common.settings.Settings;
-import org.elasticsearch.common.transport.InetSocketTransportAddress;
-import org.elasticsearch.node.Node;
-import org.elasticsearch.node.NodeBuilder;
+// import org.elasticsearch.common.settings.ImmutableSettings;
+// import org.elasticsearch.common.settings.Settings;
+// import org.elasticsearch.common.transport.InetSocketTransportAddress;
+// import org.elasticsearch.node.Node;
+// import org.elasticsearch.node.NodeBuilder;
 
 /**
  * @author Richard Xue
@@ -19,9 +19,10 @@ import org.elasticsearch.node.NodeBuilder;
 public class Sample {
     public static void main(String[] args) {
         Sample sample = new Sample();
-        sample.test();
+        // sample.test();
     }
 
+    /*
     public void test() {
         Node node = NodeBuilder.nodeBuilder().node();
         Client client = node.client();
@@ -70,4 +71,5 @@ public class Sample {
 //        Settings settings = ImmutableSettings.settingsBuilder().put("client.transport.sniff", true).build();
 //        TransportClient client = new TransportClient(settings);
     }
+    */
 }

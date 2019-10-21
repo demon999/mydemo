@@ -1,0 +1,5 @@
+1. synchronized + wait notifyAll
+2. Lock + while
+3. Lock + Condition
+4. AtomicInteger + volatile
+5. while

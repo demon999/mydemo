@@ -11,27 +11,27 @@ public class TestWaitSleep {
         System.out.println("begin our test");
         ThreadSleep sleep = new ThreadSleep();
         try {
-            Thread thread1 = new Thread(sleep,"路人甲");
-            Thread thread2 = new Thread(sleep,"路人乙");
+            Thread thread1 = new Thread(sleep, "A");
+            Thread thread2 = new Thread(sleep, "B");
             thread1.start();
             thread2.start();
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         System.out.println("test is over");
     }
 
-    class ThreadSleep implements Runnable{
+    class ThreadSleep implements Runnable {
         int count = 0;
 
         @Override
-        public void run(){
+        public void run() {
             System.out.println(Thread.currentThread().getName() + " say : hello sleep !!");
             count();
         }
 
-        public void count(){
-            while(count < 20) {
+        public void count() {
+            while (count < 100) {
                 synchronized (this) {
                     System.out.println(Thread.currentThread().getName() + " say : count is " + count);
                     try {

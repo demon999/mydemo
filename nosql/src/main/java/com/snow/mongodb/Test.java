@@ -15,7 +15,7 @@ public class Test {
     public static void demo() {
         try {
             Mongo mongo = new Mongo();
-        } catch (UnknownHostException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -46,9 +46,9 @@ public class Test {
 
             System.out.println("The Search Query has Executed!");
 
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
         } catch (MongoException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
