@@ -3,7 +3,7 @@ package com.dp.structural.proxy;
 /**
  * Created by Administrator on 14-6-25.
  */
-public class ProxySubject extends Subject {
+public class ProxySubject implements Subject {
     //以真实角色作为代理角色的属性
     private RealSubject realSubject;
 

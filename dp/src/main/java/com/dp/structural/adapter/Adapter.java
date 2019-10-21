@@ -3,7 +3,7 @@ package com.dp.structural.adapter;
 /**
  * Created by Administrator on 14-6-25.
  */
-public class Adapter extends Source implements Targetable {
+public class Adapter extends Adaptee implements Targetable {
 
     @Override
     public void operation2() {
