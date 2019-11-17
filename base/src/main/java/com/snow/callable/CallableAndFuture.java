@@ -10,15 +10,11 @@ import java.util.concurrent.FutureTask;
  */
 public class CallableAndFuture {
     public static void main(String[] args) {
-        Callable<Integer> callable = new Callable<Integer>() {
-            public Integer call() throws Exception {
-                return new Random().nextInt(100);
-            }
-        };
-        FutureTask<Integer> future = new FutureTask<Integer>(callable);
+        Callable<Integer> callable = () -> new Random().nextInt(100);
+        FutureTask<Integer> future = new FutureTask<>(callable);
         new Thread(future).start();
         try {
-            Thread.sleep(5000);// 可能做一些事情
+//            Thread.sleep(5000);// 可能做一些事情
             System.out.println(future.get());
         } catch (InterruptedException e) {
             e.printStackTrace();

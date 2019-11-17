@@ -1,79 +1,30 @@
 package com.snow.concurrent;
 
+import java.util.Random;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class CountDownLatchDemo {
 
     public static void main(String[] args) throws InterruptedException {
 
-        CountDownLatch countDownLatch = new CountDownLatch(2) {
-            @Override
-            public void await() throws InterruptedException {
-                super.await();
-                System.out.println(Thread.currentThread().getName() + " count down is ok");
-            }
-        };
-
-        Thread thread1 = new Thread(new Runnable() {
-            @Override
-            public void run() {
+        CountDownLatch countDownLatch = new CountDownLatch(3);
+        ExecutorService executorService = Executors.newFixedThreadPool(3);
+        for (int i = 0; i < 6; i++) {
+            executorService.submit(() -> {
                 //do something
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(500 + new Random().nextInt(1000));
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 System.out.println(Thread.currentThread().getName() + " is done");
                 countDownLatch.countDown();
-            }
-        }, "thread1");
-
-        Thread thread2 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                //do something
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                System.out.println(Thread.currentThread().getName() + " is done");
-                countDownLatch.countDown();
-            }
-        }, "thread2");
-        Thread thread3 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                //do something
-                try {
-                    Thread.sleep(2500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                System.out.println(Thread.currentThread().getName() + " is done");
-                countDownLatch.countDown();
-            }
-        }, "thread3");
-        Thread thread4 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                //do something
-                try {
-                    Thread.sleep(3000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                System.out.println(Thread.currentThread().getName() + " is done");
-                countDownLatch.countDown();
-            }
-        }, "thread4");
-
-
-        thread1.start();
-        thread2.start();
-        thread3.start();
-        thread4.start();
+            });
+        }
         countDownLatch.await();
+        System.out.println(Thread.currentThread().getName() + " count down is ok");
 
     }
 
