@@ -20,6 +20,10 @@ public class Test {
         }
     }
 
+    public void Test(String ss) {
+
+    }
+
     public static void test() {
         try {
 

@@ -5,6 +5,7 @@ package com.dp.creational.abstractfactory;
  */
 public class MailFactory implements IFactory {
 
+    @Override
     public ISender createSender() {
         return new MailSender();
     }

@@ -1,6 +1,6 @@
 package com.dp.creational.singleton;
 
-public enum  Singleton3 {
+public enum Singleton3 {
     INSTANCE;
 
     public void aa() {
