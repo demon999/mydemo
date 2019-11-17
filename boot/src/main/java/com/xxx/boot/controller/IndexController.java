@@ -1,4 +1,4 @@
-package com.xxx.boot.sample;
+package com.xxx.boot.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by Richard on 14-8-26.
  */
 @RestController
-public class HelloController {
+public class IndexController {
 
     @RequestMapping("/index")
     public String index() {
