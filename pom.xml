@@ -36,7 +36,7 @@
         <slf4j.log4j.version>1.7.12</slf4j.log4j.version>
 
         <jsoup.version>1.8.3</jsoup.version>
-        <itextpdf.version>5.5.0</itextpdf.version>
+        <itextpdf.version>5.5.12</itextpdf.version>
         <junit.version>4.12</junit.version>
 
     </properties>
